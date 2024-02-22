@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+struct employee{
+char Name[50];
+int empId;
+int salary;
+}a[3];
+
+int main(){
+
+  struct  employee a[3];
+  
+  printf("Enter the Employee details:");
+
+  for(int i=1;i<=3;i++){
+    printf("\nEnter the Name:");
+    scanf("%s",a[i].Name);
+    printf("\nEnter the Employee Id:");
+    scanf("%d",&a[i].empId);
+    printf("\nEnter the Salary:");
+    scanf("%d",&a[i].salary);
+    printf("-----------------------------------------------------\n");
+  }
+
+  printf("\nDisplaying Employee Details information:");
+  for(int i=1;i<=3;i++){
+    printf("\n Employee Name:%s", a[i].Name);
+    printf("\n Employee Id:%d",a[i].empId);
+    printf("\n Salary:%d",a[i].salary);
+    printf("\n-----------------------------------------------------\n");
+  }
+if(a[1].salary>a[2].salary&&a[1].salary>a[3].salary){
+  printf("\n Employee Name:%s", a[1].Name);
+  printf("\n Employee Id:%d",a[1].empId);
+  printf("\nHighest salary is %d",a[1].salary);
+}else if(a[2].salary>a[1].salary&&a[2].salary>a[3].salary){
+  printf("\n Employee Name:%s", a[2].Name);
+  printf("\n Employee Id:%d",a[2].empId);
+  printf("\nHighest salary is %d", a[2].salary);
+}else{
+  printf("\n Employee Name:%s", a[3].Name);
+  printf("\n Employee Id:%d",a[3].empId);
+  printf("\nHighest salary is %d",a[3].salary);
+}
+  return 0;
+}
