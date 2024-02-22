@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+struct book{
+char title[100];
+char author[100];
+int price;
+}b[3];
+
+int main(){
+  
+  struct book b[3];
+  printf("Enter the book details:");
+
+  for(int i=1;i<=3;i++){
+    printf("\nEnter the title:");
+    scanf("%s",b[i].title);
+    printf("\nEnter the Author Name:");
+    scanf("%s",b[i].author);
+    printf("\nEnter the price:");
+    scanf("%d",&b[i].price);
+  }
+
+  printf("\nDisplaying Books Details information:");
+  for(int i=1;i<=3;i++){
+    printf("\n%d Title:%s",i,b[i].title);
+    printf("\n%d Author:%s",i,b[i].author);
+    printf("\n%d price:%d",i,b[i].price);
+  
+  }
+  if(b[1].price>b[2].price&&b[1].price>b[3].price){
+    printf("\nThe Expensive Book is:%s",b[1].title);
+  }else if(b[2].price>b[1].price&&b[2].price>b[3].price){
+    printf("\nThe Expensive Book is:%s",b[2].title);
+  }else{
+     printf("\nThe Expensive Book is:%s",b[3].title);
+  }
+  if (b[1].price<b[2].price&&b[1].price<b[3].price){
+    printf("\nThe Cheapest Book is:%s",b[1].title);
+  }else if(b[2].price<b[1].price&&b[2].price<b[3].price){
+    printf("\nThe Expensive Book is:%s",b[2].title);
+  }else{
+     printf("\nThe Expensive Book is:%s",b[3].title);
+  }
+  return 0;
+}
+
+
+/*
+#include <stdio.h>
+
+struct book{
+char title[100];
+char author[100];
+int price;
+}b[3];
+
+int main(){
+
+  struct book b[3];
+  printf("Enter the book details:");
+
+  for(int i=1;i<=3;i++){
+    printf("\nEnter the title:");
+    scanf("%s",b[i].title);
+    printf("\nEnter the Author Name:");
+    scanf("%s",b[i].author);
+    printf("\nEnter the price:");
+    scanf("%d",&b[i].price);
+  }
+
+  printf("\nDisplaying Books Details information:");
+  for(int i=1;i<=3;i++){
+    printf("\n%d Title:%s",i,b[i].title);
+    printf("\n%d Author:%s",i,b[i].author);
+    printf("\n%d price:%d",i,b[i].price);
+    if(b[i].price>=500){
+      printf("\n %s most is Expensive Book",b[i].title);
+    }else{
+      printf("\n %s is the lowest price book",b[i].title);
+    }
+  }
+  return 0;
+}
+*/
